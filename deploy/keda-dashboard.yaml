@@ -1,0 +1,44 @@
+# identity
+kind: ServiceAccount
+apiVersion: v1
+metadata:
+  name: keda-dashboard
+  namespace: keda
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: keda-dashboard-service-account-role-binding
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: keda-dashboard
+  namespace: keda
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: keda-dashboard
+  namespace: keda
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: keda-dashboard
+  template:
+    metadata:
+      labels:
+        app: keda-dashboard
+      name: keda-dashboard
+    spec:
+      serviceAccountName: keda-dashboard
+      containers:
+      - name: keda-dashboard
+        image: ahmelsayed/keda-dashboard:latest
+        env:
+        - name: PORT
+          value: '8080'
+---

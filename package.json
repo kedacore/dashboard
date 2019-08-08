@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "install": "cd client && yarn install && cd ../server && yarn install",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"Server,Client\" -c \"magenta.bold,blue.bold\" \"cd server && yarn run watch\" \"cd client && yarn run start\"",
+    "build": "cd client && yarn build && yarn upgrade caniuse-lite browserslist && cd ../server && yarn build"
+  },
+  "dependencies": {
+    "@kubernetes/client-node": "^0.10.2",
+    "@material-ui/icons": "^4.2.1",
+    "@nivo/bar": "^0.59.2",
+    "@types/express": "^4.17.0",
+    "@types/react-router-dom": "^4.3.4",
+    "concurrently": "^4.1.0",
+    "react-router-dom": "^5.0.1"
+  }
+}
