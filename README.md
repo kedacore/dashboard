@@ -1,5 +1,7 @@
-# dashboard
-Dashboard to use to view details of your keda deployment
+<p align="center"><img src="https://github.com/kedacore/keda/blob/master/images/keda-logo-transparent.png" width="300"/></p>
+<p style="font-size: 25px" align="center"><b>Kubernetes-based Event Driven Autoscaling Dashboard</b></p>
+
+Dashboard to use to view details of your [KEDA](https://github.com/kedacore/keda) deployment.
 
 ## Prerequisites
 
@@ -35,8 +37,8 @@ then go to `http://localhost:8080` in the browser.
 
 ## Overview
 
-Click [here](https://github.com/t-shama/keda-dashboard/blob/master/OVERVIEW.md) for an overview of the KEDA codebase.
+Click [here](OVERVIEW.md) for an overview of the KEDA codebase.
 
 ## Contributing
 
-Click [here](https://github.com/t-shama/keda-dashboard/blob/master/CONTRIBUTING.md) to learn how to contribute to the KEDA dashboard.
+Click [here](CONTRIBUTING.md) to learn how to contribute to the KEDA dashboard.
