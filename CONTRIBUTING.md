@@ -1,5 +1,5 @@
 # Contributing to the KEDA Dashboard
-Before reading this guide, make sure you first review the dashboard's [OVERVIEW](https://github.com/t-shama/keda-dashboard/blob/master/OVERVIEW.md) to get a better understanding of how the code is organized. This guide also assumes that you have a basic understanding of React, Typescript, and Kubernetes.
+Before reading this guide, make sure you first review the dashboard's [OVERVIEW](OVERVIEW.md) to get a better understanding of how the code is organized. This guide also assumes that you have a basic understanding of React, Typescript, and Kubernetes.
 
 
 ## Creating a new page to the dashboard
